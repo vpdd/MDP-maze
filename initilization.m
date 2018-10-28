@@ -3,8 +3,8 @@ function mdp = initilization()
 mdp.V = [];
 mdp.H = 100;                % total horizon
 mdp.h = 2;                  % start horizion in loop with step-2 (or called horizion 2)
-mdp.gamma = 1;              % discount factor
-mdp.epsilon = 0.0001;       % terminal discrepancy
+mdp.gamma = 0.1;              % discount factor
+mdp.epsilon = 0.001;       % terminal discrepancy
 mdp.flag = 0;               % check whether the convergence reached, 0 is not! 
 
 
@@ -20,7 +20,7 @@ mdp.act = mdp.A(2);
 %      0 0   0 0];
 r = +1;         % the reward in "terminal state
 pu = -1;        % the punishment in "non-terminal" state
-ob = -999;      % the obstacles
+ob = -9999999;      % the obstacles
 fre = -0.04;    % the immediate reward in "non-terminal" states 
 mdp.R = [fre, fre, fre, r, fre, ob, fre, pu, fre, fre, fre, fre];
 

@@ -5,5 +5,5 @@ clc, clear
 
 mdp = initilization();
 
-Maze(mdp)
+res = Maze(mdp)
 

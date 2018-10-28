@@ -1,4 +1,4 @@
-function [] = Maze(mdp)
+function res = Maze(mdp)
 
 % initialize
 if nargin < 1
@@ -22,5 +22,5 @@ while mdp.flag == 0 && mdp.h < mdp.H
     mdp.h = mdp.h + 1;
 end
 
-outputResult(mdp)
+res = outputResult(mdp);
 
